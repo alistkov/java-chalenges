@@ -1,5 +1,6 @@
 plugins {
     application
+    alias(libs.plugins.lombok)
 }
 
 application {
@@ -14,6 +15,8 @@ repositories {
 }
 
 dependencies {
+    implementation(libs.commons.lang)
+
     testImplementation(platform(libs.junit.bom))
     testImplementation(libs.junit.jupiter)
 }
